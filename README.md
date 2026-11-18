@@ -48,10 +48,10 @@ Le programme de formation infirmière 2026 classe les stages en 4 typologies. Pl
 
 | Sigle | Typologie officielle | Intitulé court | Couleur |
 |---|---|---|---|
-| **SPA** | Prise en soins d'une altération de l'état de santé en phase aiguë | Soins en phase aiguë / Soins aigus | Jaune |
-| **SPS** | Prise en soins d'une altération de l'état de santé stabilisée | Soins stabilisés / Phase stabilisée | Bleu |
-| **SPR** | Accompagnement dans le cadre d'une équipe de soins primaires | Soins de premier recours / Soins primaires | Rouge |
-| **VDE** | Accompagnement en situation de vulnérabilité, dépendance ou exclusion | Vulnérabilité / Dépendance / Exclusion | Vert |
+| **SPA** | Prise en soins d'une altération de l'état de santé en phase aiguë | Soins en phase aiguë / Soins aigus | Rouge |
+| **SPS** | Prise en soins d'une altération de l'état de santé stabilisée | Soins stabilisés / Phase stabilisée | Jaune |
+| **SPR** | Accompagnement dans le cadre d'une équipe de soins primaires | Soins de premier recours / Soins primaires | Vert |
+| **VDE** | Accompagnement en situation de vulnérabilité, dépendance ou exclusion | Vulnérabilité / Dépendance / Exclusion | Bleu |
 
 **Ce que vous pouvez écrire dans vos fichiers.** Le sigle (`SPA`), l'intitulé court (`Soins aigus`, `Soins primaires`…) ou l'intitulé officiel complet sont tous reconnus. Majuscules, accents et ponctuation ne comptent pas. À l'import, la valeur est ramenée à son sigle : c'est lui qui s'affiche dans l'application, et l'intitulé officiel apparaît au survol de la pastille.
 
