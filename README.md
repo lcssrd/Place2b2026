@@ -15,6 +15,8 @@ L'outil a été pensé pour les formateurs d'IFSI qui répartissent une promotio
 - il **signale les problèmes** dans un tableau de bord : adresses introuvables, doublons, trajets trop longs, typologies qui risquent de manquer avant la fin de la formation ;
 - il **exporte** les placements et les parcours en Excel, prêts à imprimer.
 
+> **Vos données** : les noms des étudiants ne quittent jamais votre ordinateur. Ce qui est envoyé sur internet est détaillé dans un tableau au [§ 16](#16-données-envoyées-sur-internet).
+
 ---
 
 ## Sommaire
@@ -34,7 +36,7 @@ L'outil a été pensé pour les formateurs d'IFSI qui répartissent une promotio
 13. [Exports Excel](#13-exports-excel)
 14. [Réglages](#14-réglages)
 15. [Raccourcis clavier](#15-raccourcis-clavier)
-16. [Données personnelles et services externes](#16-données-personnelles-et-services-externes)
+16. [Données envoyées sur internet](#16-données-envoyées-sur-internet)
 17. [Limites connues](#17-limites-connues)
 18. [Adapter l'outil et contribuer](#18-adapter-loutil-et-contribuer)
 19. [Historique des versions](#19-historique-des-versions)
@@ -446,23 +448,26 @@ Le bas de la fenêtre rappelle la version, l'auteur et la licence.
 
 ---
 
-## 16. Données personnelles et services externes
+## 16. Données envoyées sur internet
 
-Place2b2026 n'a **pas de serveur** : les noms des étudiants, leurs parcours et vos placements ne quittent pas votre ordinateur. Ils restent dans le navigateur et dans votre fichier `.json`.
+Place2b2026 n'a **pas de serveur** : il n'envoie vos données à personne pour les stocker. Pour localiser les adresses, calculer les trajets et afficher la carte, il interroge tout de même des services publics en ligne. Voici ce qui part sur internet, et ce qui reste sur votre ordinateur.
 
-Pour fonctionner, l'outil fait tout de même appel à des services en ligne :
-
-| Service | Ce qui lui est envoyé | Pourquoi |
+| Donnée | Envoyée sur internet ? | À qui, et pourquoi |
 |---|---|---|
-| Géoplateforme IGN (`data.geopf.fr`) | Adresses des étudiants, noms et communes des lieux de stage | Localisation des adresses, fond de carte |
-| Base adresse nationale (`api-adresse.data.gouv.fr`) | Adresses, si l'IGN ne répond pas | Localisation (secours) |
-| OpenStreetMap Nominatim (`nominatim.openstreetmap.org`) | Nom, code postal et ville des **établissements** | Localisation des lieux introuvables à l'IGN |
-| OSRM (`router.project-osrm.org`) | Coordonnées GPS (sans nom) | Temps et distances en voiture |
-| Esri (`server.arcgisonline.com`) | Zone de carte affichée | Fond de carte, si l'IGN ne répond pas |
-| Google Fonts (`fonts.googleapis.com`) | Rien de plus que la requête du navigateur (adresse IP) | Police des titres Space Grotesk |
-| Google Maps | Adresse de départ et lieu de stage | Seulement si vous cliquez sur « Itinéraire » |
+| Nom et prénom des étudiants | ❌ Jamais | Restent sur votre ordinateur. |
+| Voiture (oui / non) | ❌ Jamais | Reste sur votre ordinateur. |
+| Parcours de stage et placements | ❌ Jamais | Restent sur votre ordinateur. |
+| Fichiers Excel importés et sauvegarde `.json` | ❌ Jamais | Lus et enregistrés sur votre ordinateur uniquement. |
+| Adresses des étudiants (adresse 1 et 2) | ✅ Oui, sans le nom | IGN et Base adresse nationale, pour placer le domicile sur la carte. |
+| Positions GPS des étudiants et des lieux de stage | ✅ Oui, sans le nom | OSRM, pour calculer les temps de trajet en voiture. |
+| Nom, adresse, code postal et ville des lieux de stage | ✅ Oui | IGN, Base adresse nationale et OpenStreetMap, pour placer les lieux sur la carte. |
+| Zone de carte affichée à l'écran | ✅ Oui | IGN (ou Esri en secours), pour charger le fond de carte. |
+| Adresse IP de votre ordinateur | ✅ Oui, comme pour tout site web | À chacun de ces services, et à Google Fonts pour la police des titres. |
+| Adresse d'un étudiant et lieu de son stage | ⚠️ Seulement si vous cliquez sur « Itinéraire » | Google Maps, qui s'ouvre dans un nouvel onglet. |
 
-**Les noms des étudiants ne sont jamais envoyés.** Les adresses personnelles, en revanche, passent par les services de localisation. Assurez-vous que cet usage respecte les règles de votre établissement et le RGPD : information des étudiants, durée de conservation du fichier `.json`, etc.
+**Services contactés** : Géoplateforme IGN (`data.geopf.fr`), Base adresse nationale (`api-adresse.data.gouv.fr`, en secours), OpenStreetMap Nominatim (`nominatim.openstreetmap.org`), OSRM (`router.project-osrm.org`), Esri (`server.arcgisonline.com`, en secours), Google Fonts (`fonts.googleapis.com`) et Google Maps (seulement sur clic).
+
+**À retenir** : aucun nom d'étudiant n'est envoyé. En revanche, leurs adresses passent par les services de localisation, et la position GPS de leur domicile par le service de calcul des trajets. Assurez-vous que cet usage respecte les règles de votre établissement et le RGPD : information des étudiants, durée de conservation du fichier `.json`, etc.
 
 ---
 
