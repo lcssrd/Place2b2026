@@ -1,0 +1,8 @@
+# Sorties intermédiaires de /brag, régénérables avec les scripts de work/
+work/shots/
+work/tiles/
+work/snaps/
+work/video-only.mp4
+work/audio.wav
+work/fonts/*.woff2
+work/fonts/sg.css

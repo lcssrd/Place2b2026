@@ -1,0 +1,211 @@
+﻿NOM,Voiture,Adresse 1,Adresse 2,Stage 1,Stage 2A,Stage 2B,Stage 3A,Stage 3B
+MARTIN Alice,oui,"4 rue de la République, 76290 Montivilliers","12 rue de la République, 76000 Rouen","SPA
+Clinique des Tilleuls
+Médecine polyvalente
+Rouen","VDE
+EHPAD Les Glycines
+Unité de vie protégée
+Yvetot","SPS
+Centre de soins de suite Les Hêtres
+Rééducation fonctionnelle
+Sotteville-lès-Rouen",,
+BERNARD Lucas,non,"4 rue de la République, 76160 Darnétal",,"SPR
+Maison de santé des Saules
+Consultations infirmières
+Yvetot","SPA
+Clinique des Tilleuls
+Médecine polyvalente
+Rouen",,,
+DUBOIS Camille,oui,"8 rue Jean Jaurès, 76550 Offranville","12 rue de la République, 76230 Bois-Guillaume","SPS
+Centre de santé mentale Les Peupliers
+Hôpital de jour
+Dieppe","VDE
+Centre d'hébergement Le Phare
+Accueil de jour
+Rouen","SPR
+Cabinet infirmier du Val Fleuri
+Soins à domicile
+Le Havre",,
+LEROY Inès,non,"4 rue de la République, 76700 Harfleur",,"SPR
+Cabinet infirmier du Val Fleuri
+Soins à domicile
+Le Havre","SPA
+Clinique des Mouettes
+Pneumologie
+Le Havre",,,
+MOREAU Hugo,oui,"10 Grande Rue, 27310 Bourg-Achard",,"SPA
+Hôpital des Érables
+Urgences
+Elbeuf","SPS
+Centre de soins de suite Les Hêtres
+Rééducation fonctionnelle
+Sotteville-lès-Rouen","VDE
+Centre d'hébergement Le Phare
+Accueil de jour
+Rouen",,
+PETIT Léa,oui,"6 rue du Général de Gaulle, 76450 Cany-Barville",,"SPS
+Centre de dialyse des Ajoncs
+Hémodialyse
+Fécamp","SPR
+Maison de santé des Saules
+Consultations infirmières
+Yvetot","SPA
+Clinique des Tilleuls
+Médecine polyvalente
+Rouen",,
+ROUX Nathan,non,"4 rue de la République, 76530 Grand-Couronne",,"VDE
+Centre d'hébergement Le Phare
+Accueil de jour
+Rouen","SPS
+Centre de soins de suite Les Hêtres
+Rééducation fonctionnelle
+Sotteville-lès-Rouen",,,
+FOURNIER Chloé,oui,"6 rue du Général de Gaulle, 76560 Doudeville",,"VDE
+EHPAD Les Glycines
+Unité de vie protégée
+Yvetot","SPA
+Clinique des Tilleuls
+Médecine polyvalente
+Rouen","SPR
+Cabinet infirmier des Quatre-Vents
+Soins à domicile
+Barentin",,
+GIRARD Adam,oui,"4 rue de la République, 76430 Saint-Romain-de-Colbosc",,"SPA
+Clinique des Mouettes
+Pneumologie
+Le Havre","VDE
+Foyer d'accueil Les Mésanges
+Foyer de vie
+Bolbec","SPS
+Centre de dialyse des Ajoncs
+Hémodialyse
+Fécamp",,
+BONNET Manon,non,"6 rue du Général de Gaulle, 76570 Pavilly",,"SPR
+Cabinet infirmier des Quatre-Vents
+Soins à domicile
+Barentin","VDE
+EHPAD Les Glycines
+Unité de vie protégée
+Yvetot",,,
+LAMBERT Théo,oui,"6 rue du Général de Gaulle, 76630 Envermeu",,"SPS
+Centre de santé mentale Les Peupliers
+Hôpital de jour
+Dieppe","SPA
+Hôpital des Érables
+Urgences
+Elbeuf","VDE
+Foyer d'accueil Les Mésanges
+Foyer de vie
+Bolbec",,
+FONTAINE Sarah,non,"4 rue de la République, 76130 Mont-Saint-Aignan",,"SPA
+Clinique des Tilleuls
+Médecine polyvalente
+Rouen","SPS
+Centre de soins de suite Les Hêtres
+Rééducation fonctionnelle
+Sotteville-lès-Rouen",,,
+ROUSSEAU Jules,oui,"4 rue de la République, 76110 Goderville",,"SPR
+Cabinet infirmier du Val Fleuri
+Soins à domicile
+Le Havre","VDE
+Foyer d'accueil Les Mésanges
+Foyer de vie
+Bolbec","SPA
+Clinique des Mouettes
+Pneumologie
+Le Havre",,
+VINCENT Emma,oui,"6 rue du Général de Gaulle, 76790 Étretat",,"VDE
+Foyer d'accueil Les Mésanges
+Foyer de vie
+Bolbec","SPS
+Centre de dialyse des Ajoncs
+Hémodialyse
+Fécamp","SPR
+Maison de santé des Saules
+Consultations infirmières
+Yvetot",,
+MULLER Louis,non,"4 rue de la République, 76150 Maromme",,"SPS
+Centre de soins de suite Les Hêtres
+Rééducation fonctionnelle
+Sotteville-lès-Rouen","VDE
+Centre d'hébergement Le Phare
+Accueil de jour
+Rouen","SPA
+Hôpital des Érables
+Urgences
+Elbeuf",,
+LEFEBVRE Jade,oui,"4 rue de la République, 76440 Forges-les-Eaux",,"VDE
+EHPAD Les Glycines
+Unité de vie protégée
+Yvetot","SPR
+Cabinet infirmier des Quatre-Vents
+Soins à domicile
+Barentin",,,
+MERCIER Raphaël,oui,"4 rue de la République, 27400 Louviers",,"SPA
+Hôpital des Érables
+Urgences
+Elbeuf","SPR
+Maison de santé des Saules
+Consultations infirmières
+Yvetot","SPS
+Centre de soins de suite Les Hêtres
+Rééducation fonctionnelle
+Sotteville-lès-Rouen",,
+DUPONT Lina,non,"4 rue de la République, 76600 Le Havre",,"SPA
+Clinique des Mouettes
+Pneumologie
+Le Havre","SPR
+Cabinet infirmier du Val Fleuri
+Soins à domicile
+Le Havre",,,
+BLANC Noah,oui,"6 rue du Général de Gaulle, 76750 Buchy","12 rue de la République, 76000 Rouen","SPR
+Cabinet infirmier des Quatre-Vents
+Soins à domicile
+Barentin","SPS
+Centre de santé mentale Les Peupliers
+Hôpital de jour
+Dieppe","VDE
+EHPAD Les Glycines
+Unité de vie protégée
+Yvetot",,
+GUERIN Zoé,oui,"4 rue de la République, 76460 Saint-Valery-en-Caux",,"SPS
+Centre de dialyse des Ajoncs
+Hémodialyse
+Fécamp","SPA
+Clinique des Mouettes
+Pneumologie
+Le Havre",,,
+BOYER Gabriel,oui,"6 rue du Général de Gaulle, 76890 Tôtes",,"SPR
+Maison de santé des Saules
+Consultations infirmières
+Yvetot","VDE
+EHPAD Les Glycines
+Unité de vie protégée
+Yvetot","SPA
+Clinique des Tilleuls
+Médecine polyvalente
+Rouen",,
+GARNIER Louise,oui,"6 rue du Général de Gaulle, 76480 Duclair",,"VDE
+Centre d'hébergement Le Phare
+Accueil de jour
+Rouen","SPA
+Clinique des Tilleuls
+Médecine polyvalente
+Rouen","SPS
+Centre de santé mentale Les Peupliers
+Hôpital de jour
+Dieppe",,
+CHEVALIER Tom,oui,"4 rue de la République, 76690 Clères",,"SPA
+Clinique des Tilleuls
+Médecine polyvalente
+Rouen","SPR
+Cabinet infirmier des Quatre-Vents
+Soins à domicile
+Barentin","VDE
+Centre d'hébergement Le Phare
+Accueil de jour
+Rouen",,
+FRANÇOIS Lola,oui,"4 rue de la République, 27500 Pont-Audemer",,"SPS
+Centre de soins de suite Les Hêtres
+Rééducation fonctionnelle
+Sotteville-lès-Rouen",,,,
