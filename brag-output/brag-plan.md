@@ -1,44 +1,40 @@
-# /brag — Place2b2026 (« The place to be 2026 »)
+# /brag — Place2b2026 (« The place to be 2026 ») · v2
 
 ## Ce que c'est
-Un seul fichier HTML qui place les étudiants infirmiers en stage : carte des lieux et des étudiants, temps de trajet en voiture, placement automatique optimal, parcours par typologie (programme 2026 : SPA, SPS, SPR, VDE). Pour les formateurs d'IFSI. Rien à installer.
+Un seul fichier HTML qui aide les formateurs d'IFSI à placer les étudiants infirmiers en stage : tous les lieux de stage et toutes les adresses d'étudiants sur une carte, avec le temps de trajet en voiture entre chaque étudiant et chaque lieu. Rien à installer.
 
-- **Pour qui :** les formateurs d'IFSI qui répartissent une promotion entre les lieux de stage.
-- **Ce qui le distingue :** l'algorithme hongrois répartit tout le monde d'un coup, en tenant compte de qui a une voiture ; un seul fichier, aucun serveur, aucun compte ; les noms ne quittent jamais l'ordinateur.
-- **La réplique la plus forte (tirée du README) :** « deux trajets de 25 minutes valent mieux qu'un de 10 et un de 40 ».
-- **Accroche visuelle :** la carte qui se remplit d'épingles, puis 24 liaisons qui se tracent d'un coup au clic sur « Placement automatique ».
-- **Légende à partager :** « Placer toute une promo en stage, en un fichier HTML. »
+## Angle (v2, d'après les retours)
+- **Mis en avant :** la vue d'ensemble (toute la promo sur une carte) et la facilité à voir la distance entre l'adresse d'un étudiant et les lieux de stage.
+- **Retiré :** le placement automatique (et la vue Parcours), pour garder un seul message.
+- **Légendes :** une seule à la fois, jamais collées l'une à l'autre.
+- **Son :** vraie musique produite à la place de la synthèse.
 
-## Angle
-Entrée → action clé → résultat, avec la vraie interface : deux fichiers Excel → la carte → *Placement automatique* → « Tous les étudiants sont placés » → les parcours en couleurs. Ton : `default`, dynamique et propre, avec la touche brutaliste de l'app (contours francs, ombres dures, jaune #f59e0b, rouge #e11d48, Space Grotesk + Inter).
+Accroche : « Étudiants infirmiers. Lieux de stage. À combien de minutes ? » L'app répond : on voit tout le monde sur la carte ; un clic sur une étudiante affiche ses places libres triées par temps de trajet ; le survol d'une place trace le trajet avec « 19 min · 20 km ».
 
 ## Matériel réel utilisé
-- Instantanés DOM de la vraie application (CSS, balisage, icônes, logo, polices Inter intégrée + Space Grotesk), pris dans Chromium après import, après placement automatique et dans la vue Parcours. Animés image par image (aucun script de l'app dans la vidéo).
-- Fond de carte Plan IGN mis en cache localement.
-- Chiffres affichés = vrai résultat de l'app sur les données de démo : 24/24 placés, trajet moyen 17 min, trajet max 34 min.
+- Instantanés DOM de la vraie application (CSS, balisage, icônes, logo, polices), pris dans Chromium : vue d'ensemble, étudiante sélectionnée, puis deux aperçus de trajet obtenus en survolant réellement les lignes de la liste. Animés image par image, sans les scripts de l'app.
+- Le zoom de la vue d'ensemble (niveau 10) vers le secteur de l'étudiante (niveau 11) est un vrai changement de niveau de carte : agrandissement des tuiles puis fondu court vers l'instantané au niveau 11.
+- Temps affichés = calcul réel de l'app (OSRM) sur les adresses fictives : BONNET Manon (Pavilly, sans voiture, limite 20 min) → 19 min · 20 km (Rouen, vert), 22 min · 18,2 km (Yvetot, orange).
 
 ## Données
-**100 % fictives**, dans le style des modèles Excel de l'app (Réglages › Modèles) : 24 étudiants (MARTIN Alice, BERNARD Lucas…) et 24 places dans 14 lieux aux noms inventés (Clinique des Tilleuls, EHPAD Les Glycines…). Les adresses sont des rues génériques de communes de Seine-Maritime/Eure, choisies pour que le géocodage tombe juste. Aucune donnée réelle d'étudiant.
+100 % fictives, dans le style des modèles Excel de l'app : 24 étudiants, 24 places dans 14 lieux aux noms inventés. Les adresses sont des rues génériques de communes de Seine-Maritime et de l'Eure, choisies pour que le géocodage tombe juste.
 
-## Musique
-120 BPM (1 temps = 0,5 s = 15 images, 1 mesure = 2 s), do majeur, C–G–Am–F. Synthétisée (kick, clap, charleston, basse, accords, mélodie) ; effets (whoosh, pops, clics) dans la même tonalité et sur la même grille. Lever de 2 temps, drop à 3,0 s. Tous les plans coupent sur un temps.
+## Son
+- Musique : « Happy Beats / Business Moves Vol. 12 » de Sascha Ende (ende.app), licence CC BY 4.0. Crédit dans la vidéo (écran final) et dans le texte de partage. Extrait de 5,42 s à 24,92 s du morceau, à 110 BPM : l'intro sans basse porte l'accroche, et la basse et la batterie entrent pile quand l'app apparaît (3,27 s).
+- Bruitages : Kenney (CC0), discrets, choisis parmi les sons les moins agressifs (chocs sourds, clic, survol, cloche finale).
+- Mixage normalisé à -14 LUFS, crête -1,7 dBFS.
 
-## Storyboard (22 s, 30 i/s, 1920×1080)
+## Storyboard (19,5 s, 30 i/s, 1920×1080, un temps = 0,5454 s)
 
-| # | Temps | Scène | À l'écran | Son |
-|---|---|---|---|---|
-| 1 | 0,0–3,0 | **Accroche** | Fond jaune. « Étudiants infirmiers. » + carte `etudiants.xlsx` (t=0) ; « Lieux de stage. » + carte `lieux-de-stage.xlsx` (t=1,0) ; « Qui va où ? » en rouge (t=2,0) | Accords filtrés, claps, montée |
-| 2 | 3,0–7,0 | **Révélation** | Coupe franche sur la vraie app (fenêtre brutaliste). Les épingles tombent, les points bleus apparaissent. Légende « Stages en rouge. Étudiants en bleu. » (texte de l'app). La caméra glisse vers le bouton jaune | Drop, pops sur les doubles-croches |
-| 3 | 7,0–11,0 | **Action** | Curseur, clic sur *Placement automatique* (7,5), vraie boîte de dialogue (35 min / 20 min), clic sur *Lancer le placement* (8,5). Les 24 liaisons se tracent, les points passent au vert, les badges d'épingles décomptent jusqu'à ✓, les compteurs passent à 24/24. Légende « Placement automatique. » | Clics, arpège montant |
-| 4 | 11,0–13,0 | **Résultat** | Vraie fenêtre « Tous les étudiants sont placés » : 24/24 · 17 min · 34 min | Impact |
-| 5 | 13,0–15,0 | **Le malin** | Fond encre. « Des trajets raisonnables pour tous. » 10 + 40 min ✗ contre 25 + 25 min ✓ | Break, sans kick |
-| 6 | 15,0–16,94 | **Parcours** | Vraie vue Parcours : les cartes SPA/SPS/SPR/VDE tombent colonne par colonne, la colonne « Stage 3A » (prévu) en dernier. Légende « Chaque parcours, typologie par typologie. » | Retour du groove |
-| 7 | 16,94–22,0 | **Final** | Balayage jaune, logo + « The place to be 2026 », « Un seul fichier HTML. Rien à installer. », « Logiciel libre · github.com/lcssrd/Place2b2026 » | Accord final à 21,0 s |
+| # | Temps | Scène | À l'écran |
+|---|---|---|---|
+| 1 | 0–3,27 | **Accroche** | Fond jaune, cartes `etudiants.xlsx` et `lieux-de-stage.xlsx`. « Étudiants infirmiers. » (0), « Lieux de stage. » (0,82), « À combien de minutes ? » (1,64) |
+| 2 | 3,27–7,09 | **Vue d'ensemble** | Vraie app. Les épingles tombent, les points des étudiants apparaissent. Légende unique : « Toute la promo, d'un coup d'œil. » avec le code couleur (lieux de stage / étudiants) |
+| 3 | 7,09–9,82 | **Un clic** | Le curseur clique sur BONNET Manon, sa fiche glisse, la carte zoome sur Pavilly, la colonne défile jusqu'à « Places libres les plus proches » (5, 19, 21, 22 min…). Légende : « Un clic : ses stages les plus proches. » |
+| 4 | 9,82–14,18 | **Les distances** | Survol de « Accueil de jour » : trajet tracé, « 19 min · 20 km », bulles étudiante et lieu. Puis survol de « Unité de vie protégée » : « 22 min · 18,2 km » vers Yvetot. Légende : « Chaque trajet, en minutes et en km. » |
+| 5 | 14,18–19,5 | **Final** | Logo, « The place to be 2026 », « Un seul fichier HTML. Rien à installer. », « Logiciel libre · github.com/lcssrd/Place2b2026 », crédit musique |
+
+Affiche (image 0) : 11,3 s, le trajet de 19 min affiché avec la légende.
 
 ## Rendu
-- Composition HTML (`work/comp.html`) animée par une fonction pure du temps, capturée image par image dans Chromium (Playwright), encodée en H.264 (CRF 16) ; bande-son synthétisée en Python/numpy (`work/music.py`), normalisée à -14 LUFS (crête -2,3 dBFS).
-- Récupéré pendant la fabrication : la police Space Grotesk (Google Fonts) et les tuiles du Plan IGN (mises en cache dans `work/`) ; le géocodage et les temps de trajet ont été calculés par l'application elle-même (IGN, BAN, OSRM) sur les adresses fictives.
-- Affiche : image à 10,75 s (carte avec les 24 liaisons et « Toute la promo, d'un coup. »), intégrée comme image 0.
-
-## Contrôles prévus
-Images fixes de chaque scène et à chaque fin/début de transition (2,85 / 3,0 / 6,9 / 8,5 / 10,9 / 12,9 / 13,1 / 14,9 / 15,1 / 16,9 / 17,1), nombre d'images = 22 × 30 = 660, image 0 = affiche.
+Composition `work/comp2.html` (fonction pure du temps), capturée image par image par Playwright, encodée en H.264 (CRF 16) ; mixage `work/mix.py`. Instantanés : `work/snap2.js`.

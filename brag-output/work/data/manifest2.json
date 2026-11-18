@@ -1,0 +1,473 @@
+{
+ "V0": {
+  "c": [
+   49.570649710591326,
+   0.8253479003906251
+  ],
+  "z": 10
+ },
+ "V1": {
+  "c": [
+   49.562160999999996,
+   0.989438
+  ],
+  "z": 11
+ },
+ "sid": "s810isk",
+ "pt": [
+  49.567161,
+  0.954438
+ ],
+ "ov": {
+  "dots": [
+   {
+    "sid": "s16noj9q",
+    "p": [
+     266,
+     520
+    ]
+   },
+   {
+    "sid": "s1xwpj2z",
+    "p": [
+     963,
+     636
+    ]
+   },
+   {
+    "sid": "sgkjndu",
+    "p": [
+     883,
+     154
+    ]
+   },
+   {
+    "sid": "s14gb1en",
+    "p": [
+     271,
+     563
+    ]
+   },
+   {
+    "sid": "s1jiligx",
+    "p": [
+     721,
+     733
+    ]
+   },
+   {
+    "sid": "s1y8cc71",
+    "p": [
+     588,
+     248
+    ]
+   },
+   {
+    "sid": "s1ddxqbx",
+    "p": [
+     862,
+     730
+    ]
+   },
+   {
+    "sid": "saz7bwa",
+    "p": [
+     698,
+     321
+    ]
+   },
+   {
+    "sid": "s1mpfrrl",
+    "p": [
+     387,
+     536
+    ]
+   },
+   {
+    "sid": "s810isk",
+    "p": [
+     822,
+     495
+    ]
+   },
+   {
+    "sid": "ssbnspo",
+    "p": [
+     1048,
+     125
+    ]
+   },
+   {
+    "sid": "s3u2548",
+    "p": [
+     926,
+     604
+    ]
+   },
+   {
+    "sid": "s1tnlc2n",
+    "p": [
+     386,
+     411
+    ]
+   },
+   {
+    "sid": "s1h0jrto",
+    "p": [
+     274,
+     337
+    ]
+   },
+   {
+    "sid": "s1kqu09u",
+    "p": [
+     886,
+     590
+    ]
+   },
+   {
+    "sid": "s1aj6emc",
+    "p": [
+     1252,
+     444
+    ]
+   },
+   {
+    "sid": "s1b695pl",
+    "p": [
+     977,
+     891
+    ]
+   },
+   {
+    "sid": "ssvdsoz",
+    "p": [
+     220,
+     574
+    ]
+   },
+   {
+    "sid": "ssw3xd7",
+    "p": [
+     1116,
+     475
+    ]
+   },
+   {
+    "sid": "s134bmkd",
+    "p": [
+     648,
+     163
+    ]
+   },
+   {
+    "sid": "s1vlow1o",
+    "p": [
+     887,
+     369
+    ]
+   },
+   {
+    "sid": "s11bm8ri",
+    "p": [
+     765,
+     590
+    ]
+   },
+   {
+    "sid": "s1m31uyw",
+    "p": [
+     934,
+     439
+    ]
+   },
+   {
+    "sid": "sgmtima",
+    "p": [
+     502,
+     732
+    ]
+   },
+   {
+    "sid": "s16noj9q",
+    "p": [
+     926,
+     640
+    ]
+   },
+   {
+    "sid": "sgkjndu",
+    "p": [
+     940,
+     603
+    ]
+   },
+   {
+    "sid": "s16noj9q",
+    "p": [
+     926,
+     640
+    ]
+   }
+  ],
+  "pins": [
+   {
+    "loc": "l1qvn8zr",
+    "n": 3,
+    "p": [
+     918,
+     633
+    ],
+    "name": "Clinique des Tilleuls"
+   },
+   {
+    "loc": "l11vrunx",
+    "n": 3,
+    "p": [
+     856,
+     804
+    ],
+    "name": "Hôpital des Érables"
+   },
+   {
+    "loc": "lttvmvn",
+    "n": 2,
+    "p": [
+     205,
+     585
+    ],
+    "name": "Clinique des Mouettes"
+   },
+   {
+    "loc": "lipc0zx",
+    "n": 2,
+    "p": [
+     918,
+     669
+    ],
+    "name": "Centre de soins de suite Les Hêtres"
+   },
+   {
+    "loc": "lzmoefv",
+    "n": 1,
+    "p": [
+     909,
+     92
+    ],
+    "name": "Centre de santé mentale Les Peupliers"
+   },
+   {
+    "loc": "ljl22ft",
+    "n": 2,
+    "p": [
+     398,
+     280
+    ],
+    "name": "Centre de dialyse des Ajoncs"
+   },
+   {
+    "loc": "l11gislh",
+    "n": 1,
+    "p": [
+     204,
+     580
+    ],
+    "name": "Cabinet infirmier du Val Fleuri"
+   },
+   {
+    "loc": "l7ord0j",
+    "n": 1,
+    "p": [
+     675,
+     439
+    ],
+    "name": "Maison de santé des Saules"
+   },
+   {
+    "loc": "l973dq4",
+    "n": 1,
+    "p": [
+     512,
+     548
+    ],
+    "name": "Maison de santé de la Falaise"
+   },
+   {
+    "loc": "lcw21in",
+    "n": 2,
+    "p": [
+     821,
+     519
+    ],
+    "name": "Cabinet infirmier des Quatre-Vents"
+   },
+   {
+    "loc": "l12tfb2r",
+    "n": 2,
+    "p": [
+     679,
+     435
+    ],
+    "name": "EHPAD Les Glycines"
+   },
+   {
+    "loc": "l1snwzgv",
+    "n": 1,
+    "p": [
+     919,
+     638
+    ],
+    "name": "Centre d'hébergement Le Phare"
+   },
+   {
+    "loc": "l331g3e",
+    "n": 2,
+    "p": [
+     471,
+     489
+    ],
+    "name": "Foyer d'accueil Les Mésanges"
+   },
+   {
+    "loc": "l1fctub1",
+    "n": 1,
+    "p": [
+     1174,
+     309
+    ],
+    "name": "EHPAD Les Charmilles"
+   }
+  ],
+  "rowRect": {
+   "x": 27,
+   "y": 579.375,
+   "width": 394,
+   "height": 62.421875,
+   "top": 579.375,
+   "right": 421,
+   "bottom": 641.796875,
+   "left": 27
+  }
+ },
+ "pv": {
+  "pv2": {
+   "idx": 2,
+   "rect": {
+    "x": 39,
+    "y": 162.546875,
+    "width": 370,
+    "height": 61.296875,
+    "top": 162.546875,
+    "right": 409,
+    "bottom": 223.84375,
+    "left": 39
+   },
+   "scroll": 924,
+   "label": "19 min · 20 km"
+  },
+  "pv3": {
+   "idx": 6,
+   "rect": {
+    "x": 39,
+    "y": 407.734375,
+    "width": 370,
+    "height": 61.296875,
+    "top": 407.734375,
+    "right": 409,
+    "bottom": 469.03125,
+    "left": 39
+   },
+   "scroll": 924,
+   "label": "22 min · 18,2 km"
+  }
+ },
+ "opts": [
+  {
+   "i": 0,
+   "l": "lcw21in",
+   "txt": "Soins à domicile SPR Cabinet infirmier des Quatre-Vents · Barentin 5 min Placer"
+  },
+  {
+   "i": 1,
+   "l": "lcw21in",
+   "txt": "Soins à domicile SPR Cabinet infirmier des Quatre-Vents · Barentin 5 min Placer"
+  },
+  {
+   "i": 2,
+   "l": "l1snwzgv",
+   "txt": "Accueil de jour VDE Centre d'hébergement Le Phare · Rouen 19 min Placer"
+  },
+  {
+   "i": 3,
+   "l": "l1qvn8zr",
+   "txt": "Chirurgie orthopédique SPA Clinique des Tilleuls · Rouen 21 min Placer"
+  },
+  {
+   "i": 4,
+   "l": "l1qvn8zr",
+   "txt": "Chirurgie orthopédique SPA Clinique des Tilleuls · Rouen 21 min Placer"
+  },
+  {
+   "i": 5,
+   "l": "l1qvn8zr",
+   "txt": "Médecine polyvalente SPA Clinique des Tilleuls · Rouen 21 min Placer"
+  },
+  {
+   "i": 6,
+   "l": "l12tfb2r",
+   "txt": "Unité de vie protégée VDE EHPAD Les Glycines · Yvetot 22 min Placer"
+  },
+  {
+   "i": 7,
+   "l": "l12tfb2r",
+   "txt": "Hébergement permanent VDE EHPAD Les Glycines · Yvetot 22 min Placer"
+  },
+  {
+   "i": 8,
+   "l": "l7ord0j",
+   "txt": "Consultations infirmières SPR Maison de santé des Saules · Yvetot 23 min Placer"
+  },
+  {
+   "i": 9,
+   "l": "lipc0zx",
+   "txt": "Rééducation fonctionnelle SPS Centre de soins de suite Les Hêtres · Sotteville-lès-Rouen 2"
+  },
+  {
+   "i": 10,
+   "l": "lipc0zx",
+   "txt": "Soins de suite polyvalents SPS Centre de soins de suite Les Hêtres · Sotteville-lès-Rouen "
+  },
+  {
+   "i": 11,
+   "l": "l11vrunx",
+   "txt": "Urgences SPA Hôpital des Érables · Elbeuf 37 min Placer"
+  },
+  {
+   "i": 12,
+   "l": "l11vrunx",
+   "txt": "Cardiologie SPA Hôpital des Érables · Elbeuf 37 min Placer"
+  },
+  {
+   "i": 13,
+   "l": "l11vrunx",
+   "txt": "Médecine gériatrique SPA Hôpital des Érables · Elbeuf 37 min Placer"
+  },
+  {
+   "i": 14,
+   "l": "l331g3e",
+   "txt": "Foyer de vie VDE Foyer d'accueil Les Mésanges · Bolbec 39 min Placer"
+  }
+ ],
+ "selRect": {
+  "detail": {
+   "x": 15,
+   "y": 83,
+   "width": 418,
+   "height": 982,
+   "top": 83,
+   "right": 433,
+   "bottom": 1065,
+   "left": 15
+  }
+ }
+}

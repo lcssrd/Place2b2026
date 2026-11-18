@@ -5,7 +5,7 @@ const { chromium } = require('playwright');
   const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
   p.on('console', m => { if (m.type() === 'error') console.log('console:', m.text()); });
   p.on('pageerror', e => console.log('pageerror:', e.message));
-  await p.goto('http://127.0.0.1:8765/comp.html');
+  await p.goto('http://127.0.0.1:8765/' + (process.env.COMP || 'comp.html'));
   await p.evaluate(() => window.ready);
   for (const a of process.argv.slice(2)) {
     const t = +a;

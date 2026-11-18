@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>brag · Place2b2026 · v2</title>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<style>
+:root{
+  --ink:#1a1d29; --ink-soft:#383c4e; --muted:#646a7d;
+  --yellow:#f59e0b; --logo:#FFD84D; --heart:#e11d48; --heart-text:#be123c;
+  --blue:#2563eb; --green:#047857;
+  --wash1:#e8edf5; --wash2:#f4edf0; --wash3:#ecf0f5;
+  --sg:"Space Grotesk",Inter,system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#000}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--logo);font-family:var(--sg);color:var(--ink)}
+.scene{position:absolute;inset:0;overflow:hidden}
+.dots-ink{background-image:radial-gradient(rgba(26,29,41,.13) 2px,transparent 2.4px);background-size:36px 36px}
+
+/* ---------- 1. Accroche ---------- */
+#s1{background-color:var(--logo);z-index:30}
+.hl{position:absolute;left:110px;font-weight:700;font-size:104px;line-height:.98;letter-spacing:-3.5px;white-space:nowrap}
+#l1{top:96px}#l2{top:350px}
+#l3{top:620px;left:96px;font-size:112px;line-height:1;letter-spacing:-3.5px;color:#fff;background:var(--heart);border:5px solid var(--ink);border-radius:26px;padding:12px 40px 26px;box-shadow:12px 12px 0 var(--ink);transform-origin:20% 50%}
+.xl{position:absolute;width:860px;background:#fff;border:4px solid var(--ink);border-radius:22px;box-shadow:14px 14px 0 var(--ink);overflow:hidden;font-family:Inter,system-ui,sans-serif}
+.xl-head{display:flex;align-items:center;gap:16px;padding:16px 22px;border-bottom:4px solid var(--ink);background:#fff}
+.xl-ico{width:46px;height:46px;border-radius:10px;background:var(--green);border:3px solid var(--ink);display:grid;place-items:center}
+.xl-name{font-family:var(--sg);font-weight:700;font-size:32px;letter-spacing:-.8px}
+.xl-tag{margin-left:auto;font-family:var(--sg);font-weight:600;font-size:20px;color:var(--muted)}
+.xl table{border-collapse:collapse;width:100%;font-size:17px;table-layout:fixed}
+.xl th{background:#1F4E79;color:#fff;text-align:left;font-weight:700;padding:9px 12px;border:1px solid #B9BDCA;white-space:nowrap;overflow:hidden}
+.xl td{padding:8px 12px;border:1px solid #B9BDCA;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#1a1d29}
+.xl td.rn,.xl th.rn{width:44px;background:#f1f3f8;color:#646a7d;text-align:center;font-weight:600;padding:8px 0}
+.xl .cols td{background:#f1f3f8;color:#646a7d;text-align:center;font-weight:600;font-size:14px;padding:4px 0}
+.d-spa{background:#FCE4E4!important;color:#8E1F1F!important;font-weight:700}
+.d-sps{background:#FFF3C4!important;color:#6F5200!important;font-weight:700}
+.d-spr{background:#DDF3E1!important;color:#1B6230!important;font-weight:700}
+.d-vde{background:#DFEBFA!important;color:#1D4A85!important;font-weight:700}
+#xA{left:975px;top:110px}
+#xB{left:1000px;top:560px}
+
+/* ---------- Carte (vraie application) ---------- */
+.appbg{background:linear-gradient(160deg,var(--wash1) 0%,var(--wash2) 45%,var(--wash3) 100%)}
+.win{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;border:4px solid var(--ink);border-radius:26px;box-shadow:16px 16px 0 var(--ink);overflow:hidden;background:#fff}
+.win iframe{position:absolute;left:0;top:0;display:block;width:1920px;height:1080px;border:0;background:#fff}
+.cap{position:absolute;left:0;top:0;background:#fff;border:4px solid var(--ink);border-radius:20px;box-shadow:9px 9px 0 var(--ink);padding:14px 30px 18px 28px;font-weight:700;font-size:54px;letter-spacing:-1.5px;white-space:nowrap;z-index:20}
+.cap.yellow{background:var(--logo)}
+.cap .legend{display:flex;align-items:center;gap:34px;margin-top:10px;font-size:32px;font-weight:600;letter-spacing:-.5px;color:var(--ink-soft)}
+.cap .legend span{display:flex;align-items:center;gap:12px}
+.cap .sw{width:26px;height:26px;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px var(--ink);flex:none}
+#cursor{position:absolute;left:0;top:0;width:60px;height:72px;z-index:40;transform-origin:6px 6px;filter:drop-shadow(5px 5px 0 rgba(26,29,41,.9))}
+.ring{position:absolute;left:0;top:0;width:110px;height:110px;margin:-55px 0 0 -55px;border-radius:50%;border:6px solid var(--ink);z-index:39;opacity:0}
+
+/* ---------- Final ---------- */
+#s6{background-color:var(--logo);z-index:30}
+#logo{position:absolute;left:840px;top:96px;width:240px;height:240px}
+#logo svg{width:240px;height:240px;border:5px solid var(--ink);border-radius:56px;box-shadow:12px 12px 0 var(--ink);display:block}
+#title{position:absolute;left:0;right:0;top:386px;text-align:center;font-weight:700;font-size:132px;letter-spacing:-5px;line-height:1}
+#title span{color:var(--heart-text)}
+#tag{position:absolute;left:0;right:0;top:566px;text-align:center;font-weight:600;font-size:60px;letter-spacing:-1.5px}
+#url{position:absolute;top:715px;left:50%;display:flex;align-items:center;gap:22px;background:#fff;border:5px solid var(--ink);border-radius:24px;box-shadow:12px 12px 0 var(--ink);padding:18px 36px 22px;font-weight:700;font-size:46px;letter-spacing:-1px;white-space:nowrap}
+#url .lic{background:var(--ink);color:var(--logo);border-radius:12px;padding:4px 16px 8px;font-size:36px}
+#credit{position:absolute;left:0;right:0;bottom:34px;text-align:center;font-family:Inter,system-ui,sans-serif;font-size:22px;font-weight:500;color:rgba(26,29,41,.62)}
+#wipe6{position:absolute;inset:0;background:var(--logo);z-index:29}
+</style>
+</head>
+<body>
+<div id="stage">
+
+  <!-- 1. Accroche -->
+  <section class="scene dots-ink" id="s1">
+    <div class="xl" id="xA">
+      <div class="xl-head"><div class="xl-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div><div class="xl-name">etudiants.xlsx</div><div class="xl-tag">24 lignes</div></div>
+      <table>
+        <colgroup><col style="width:44px"><col style="width:180px"><col style="width:96px"><col style="width:180px"><col><col></colgroup>
+        <tr class="cols"><td class="rn"></td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td></tr>
+        <tr><th class="rn">1</th><th>NOM</th><th>Voiture</th><th>Adresse 1</th><th>Stage 1</th><th>Stage 2A</th></tr>
+        <tr><td class="rn">2</td><td>MARTIN Alice</td><td>oui</td><td>Montivilliers</td><td class="d-spa">SPA · Clinique des Tilleuls</td><td class="d-vde">VDE · EHPAD Les Glycines</td></tr>
+        <tr><td class="rn">3</td><td>BERNARD Lucas</td><td>non</td><td>Darnétal</td><td class="d-spr">SPR · Maison de santé des Saules</td><td class="d-spa">SPA · Clinique des Tilleuls</td></tr>
+        <tr><td class="rn">4</td><td>BONNET Manon</td><td>non</td><td>Pavilly</td><td class="d-spr">SPR · Les Quatre-Vents</td><td class="d-vde">VDE · EHPAD Les Glycines</td></tr>
+        <tr><td class="rn">5</td><td>LEROY Inès</td><td>non</td><td>Harfleur</td><td class="d-spr">SPR · Val Fleuri</td><td class="d-spa">SPA · Clinique des Mouettes</td></tr>
+        <tr><td class="rn">6</td><td>MOREAU Hugo</td><td>oui</td><td>Bourg-Achard</td><td class="d-spa">SPA · Hôpital des Érables</td><td class="d-sps">SPS · Les Hêtres</td></tr>
+      </table>
+    </div>
+    <div class="xl" id="xB">
+      <div class="xl-head"><div class="xl-ico" style="background:var(--heart)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div><div class="xl-name">lieux-de-stage.xlsx</div><div class="xl-tag">24 places</div></div>
+      <table>
+        <colgroup><col style="width:44px"><col style="width:110px"><col><col style="width:220px"><col style="width:150px"></colgroup>
+        <tr class="cols"><td class="rn"></td><td>A</td><td>B</td><td>C</td><td>D</td></tr>
+        <tr><th class="rn">1</th><th>Typologie</th><th>Établissement</th><th>Service</th><th>Ville</th></tr>
+        <tr><td class="rn">2</td><td class="d-spa">SPA</td><td>Clinique des Tilleuls</td><td>Chirurgie orthopédique</td><td>Rouen</td></tr>
+        <tr><td class="rn">3</td><td class="d-spa">SPA</td><td>Hôpital des Érables</td><td>Urgences</td><td>Elbeuf</td></tr>
+        <tr><td class="rn">4</td><td class="d-sps">SPS</td><td>Les Hêtres</td><td>Rééducation fonctionnelle</td><td>Sotteville</td></tr>
+        <tr><td class="rn">5</td><td class="d-spr">SPR</td><td>Maison de santé des Saules</td><td>Consultations</td><td>Yvetot</td></tr>
+        <tr><td class="rn">6</td><td class="d-vde">VDE</td><td>EHPAD Les Glycines</td><td>Unité de vie protégée</td><td>Yvetot</td></tr>
+      </table>
+    </div>
+    <div class="hl" id="l1">Étudiants<br>infirmiers.</div>
+    <div class="hl" id="l2">Lieux<br>de stage.</div>
+    <div class="hl" id="l3">À combien<br>de minutes ?</div>
+  </section>
+
+  <!-- 2-3. Carte : vraie application -->
+  <section class="scene appbg" id="sMap">
+    <div class="win" id="win">
+      <iframe id="fOV" src="/snaps2/ov.html"></iframe>
+      <iframe id="fSEL0" src="/snaps2/sel0.html"></iframe>
+      <iframe id="fSEL1" src="/snaps2/sel1.html"></iframe>
+      <iframe id="fPV2" src="/snaps2/pv2.html"></iframe>
+      <iframe id="fPV3" src="/snaps2/pv3.html"></iframe>
+    </div>
+    <div class="cap" id="c1">Toute la promo, d'un coup d'œil.
+      <div class="legend"><span><svg width="30" height="38" viewBox="0 0 28 36"><path d="M14 35s11-11.2 11-20.5A11 11 0 0 0 3 14.5C3 23.8 14 35 14 35z" fill="#e11d48" stroke="#1a1d29" stroke-width="2"/><circle cx="14" cy="14.5" r="4.2" fill="#fff"/></svg>Lieux de stage</span><span><i class="sw" style="background:#1E3A8A"></i>Étudiants</span></div>
+    </div>
+    <div class="cap yellow" id="c2">Un clic : ses stages les plus proches.</div>
+    <div class="cap yellow" id="c3">Chaque trajet, en minutes et en km.</div>
+    <svg id="cursor" viewBox="0 0 30 36"><path d="M3 2.5v26.5l7-6.6 4.6 10.4 4.6-2-4.5-10.2h9.8z" fill="#fff" stroke="#1a1d29" stroke-width="2.6" stroke-linejoin="round"/></svg>
+    <div class="ring" id="ring"></div>
+  </section>
+
+  <!-- Final -->
+  <div id="wipe6"></div>
+  <section class="scene dots-ink" id="s6">
+    <div id="logo"><svg viewBox="0 0 48 48" role="img" aria-label="Logo The place to be"><rect width="48" height="48" fill="#FFD84D"/><circle cx="9.5" cy="11" r="2.6" fill="#4C7DFF"/><circle cx="40.5" cy="37" r="2" fill="#FF8FB1"/><path d="M39 4.2l1.4 3.4 3.4 1.4-3.4 1.4L39 13.8l-1.4-3.4-3.4-1.4 3.4-1.4z" fill="#14B89A"/><ellipse cx="24" cy="43" rx="6.5" ry="1.7" fill="#000" opacity=".13"/><path d="M24 42.2s12.3-11.6 12.3-21.4a12.3 12.3 0 0 0-24.6 0C11.7 30.6 24 42.2 24 42.2z" fill="#FF5A5F"/><circle cx="24" cy="20.8" r="7.8" fill="#fff"/><circle cx="21.2" cy="19.4" r="1.25" fill="#1E2A5A"/><circle cx="26.8" cy="19.4" r="1.25" fill="#1E2A5A"/><circle cx="19.3" cy="22.4" r="1.2" fill="#FF8FB1" opacity=".8"/><circle cx="28.7" cy="22.4" r="1.2" fill="#FF8FB1" opacity=".8"/><path d="M21 22.6q3 3.3 6 0" fill="none" stroke="#1E2A5A" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+    <div id="title">The place <span>to be</span> 2026</div>
+    <div id="tag">Un seul fichier HTML. Rien à installer.</div>
+    <div id="url"><span class="lic">Logiciel libre</span>github.com/lcssrd/Place2b2026</div>
+    <div id="credit">Musique : Sascha Ende, ende.app (CC BY 4.0)</div>
+  </section>
+</div>
+
+<script>
+/* ---------- Grille musicale : 110 BPM ---------- */
+const B = 0.5454;                         // un temps
+const K = n => +(n * B).toFixed(4);       // temps n (en secondes)
+const T = {
+  L1: K(0), L2: K(1.5), L3: K(3), WIPE1: 3.06, DROP: K(6),
+  C1in: K(7), C1out: 6.78, CLICK: K(13), C2in: K(14), ZOOM0: K(14), ZOOM1: 8.45, C2out: 9.72,
+  H1: K(18), C3in: K(19), H2: K(22), C3out: 13.9, WIPE6: 13.96, OUT: K(26),
+};
+const cl = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+const pr = (t, a, b) => cl((t - a) / (b - a));
+const lerp = (a, b, k) => a + (b - a) * k;
+const E = {
+  lin: k => k, outCubic: k => 1 - Math.pow(1 - k, 3), inCubic: k => k * k * k,
+  inOutCubic: k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2,
+  outExpo: k => k === 1 ? 1 : 1 - Math.pow(2, -10 * k),
+  outBack: (k, s = 1.7) => 1 + (s + 1) * Math.pow(k - 1, 3) + s * Math.pow(k - 1, 2),
+  inOutSine: k => -(Math.cos(Math.PI * k) - 1) / 2,
+};
+function kf(t, frames) {
+  if (t <= frames[0][0]) return { ...frames[0][1] };
+  for (let i = 1; i < frames.length; i++) {
+    const [t1, v1, ease] = frames[i], [t0, v0] = frames[i - 1];
+    if (t <= t1) { const k = (E[ease || 'inOutCubic'])(pr(t, t0, t1)); const o = {}; for (const key in v1) o[key] = lerp(v0[key], v1[key], k); return o; }
+  }
+  return { ...frames[frames.length - 1][1] };
+}
+const $ = s => document.querySelector(s);
+const show = (el, on) => { const d = on ? '' : 'none'; if (el.style.display !== d) el.style.display = d; };
+function setT(el, tr, op) { el.style.transform = tr; if (op !== undefined) el.style.opacity = op; }
+// légende : entre en glissant (depuis la gauche ou la droite), ressort du même côté
+function capAnim(el, t, tin, tout, x, y, fromRight = false) {
+  const a = E.outBack(pr(t, tin, tin + .34), 1.3), b = E.inCubic(pr(t, tout - .24, tout));
+  const dir = fromRight ? 1 : -1;
+  show(el, t >= tin && t < tout);
+  setT(el, `translate(${x + dir * (80 * (1 - a) + 140 * b)}px, ${y}px)`, cl(pr(t, tin, tin + .12)) * (1 - b));
+}
+
+/* ---------- Accroche ---------- */
+function s1(t) {
+  const sc = $('#s1');
+  show(sc, t < T.DROP);
+  if (t >= T.DROP) return;
+  sc.style.transform = `translateY(${-1090 * E.inCubic(pr(t, T.WIPE1, T.DROP))}px)`;
+  const line = (el, t0) => { const k = E.outExpo(pr(t, t0, t0 + .32)); setT(el, `translateY(${70 * (1 - k)}px)`, cl(pr(t, t0, t0 + .1))); };
+  line($('#l1'), T.L1); line($('#l2'), T.L2);
+  const k3 = pr(t, T.L3, T.L3 + .34), b3 = E.outBack(k3, 2.0);
+  setT($('#l3'), `rotate(${lerp(-9, -2.5, b3)}deg) scale(${lerp(1.6, 1, b3)})`, cl(k3 * 4));
+  const shake = t >= T.L3 ? Math.sin((t - T.L3) * 60) * 8 * Math.exp(-(t - T.L3) * 9) : 0;
+  const card = (el, t0, r0, r1) => { const k = E.outBack(pr(t, t0, t0 + .42), 1.25); setT(el, `translate(${980 * (1 - k) + shake}px, ${-40 * (1 - k)}px) rotate(${lerp(r0, r1, k)}deg)`, cl(pr(t, t0, t0 + .06))); };
+  card($('#xA'), T.L1, -16, -4); card($('#xB'), T.L2, 14, 3);
+}
+
+/* ---------- Carte ---------- */
+let M = {}, MAN, OV = {}, SEL0 = {}, PV = {}, RB = {};
+const MAP_X = 449, MAP_Y = 83, MAP_W = 1456, MAP_H = 982;   // position de la carte dans l'app
+function proj(lat, lng, z) { const s = 256 * Math.pow(2, z), r = lat * Math.PI / 180; return [s * (lng + 180) / 360, s * (1 - Math.log(Math.tan(r) + 1 / Math.cos(r)) / Math.PI) / 2]; }
+function cssInto(doc, txt) { const st = doc.createElement('style'); st.textContent = txt; doc.head.appendChild(st); }
+const BASE_CSS = `img.leaflet-tile{width:257px!important;height:257px!important;mix-blend-mode:normal!important}
+  .pin{transform-origin:14px 35px} path{transform-box:fill-box;transform-origin:center}
+  .row.vhover{background:var(--ds-surface)!important;border-color:var(--ds-stroke)!important;box-shadow:var(--sh-sm)!important}
+  .row.vpress{transform:translate(2px,2px);box-shadow:none!important}
+  .opt.vhover{background:var(--stu-bg)!important}`;
+function setupMap(man) {
+  MAN = man;
+  for (const id of ['fOV', 'fSEL0', 'fSEL1', 'fPV2', 'fPV3']) { M[id] = $('#' + id); cssInto(M[id].contentDocument, BASE_CSS); }
+  // vue d'ensemble : épingles et points (ordre d'ouest en est)
+  const D0 = M.fOV.contentDocument;
+  OV.pins = [...D0.querySelectorAll('.leaflet-marker-icon[data-loc]')].map(el => ({ el: el.firstElementChild, x: parseFloat(/translate3d\(([-\d.]+)px/.exec(el.style.transform)[1]) }));
+  OV.pins.sort((a, b) => a.x - b.x).forEach((p, i) => p.t = T.DROP + .03 + i * .068);
+  OV.dots = [...D0.querySelectorAll('path.st-dot')].map(el => ({ el, x: +/M([\d.-]+)/.exec(el.getAttribute('d'))[1] }));
+  OV.dots.sort((a, b) => a.x - b.x).forEach((d, i) => d.t = T.DROP + .5 + i * (0.85 / OV.dots.length));
+  OV.row = D0.querySelector(`#list .row[data-id="${man.sid}"]`);
+  const r = OV.row.getBoundingClientRect(); RB.row = [r.x + r.width * .32, r.y + r.height * .5];
+  // sélection à l'échelle de la vue d'ensemble : on prépare le zoom vers la vue à l'échelle 11
+  const D1 = M.fSEL0.contentDocument;
+  const c0 = proj(man.V0.c[0], man.V0.c[1], man.V0.z), c1 = proj(man.V1.c[0], man.V1.c[1], man.V0.z);
+  SEL0.p0 = [c1[0] - c0[0] + MAP_W / 2, c1[1] - c0[1] + MAP_H / 2];
+  SEL0.tiles = D1.querySelector('.leaflet-tile-pane'); SEL0.tiles.style.transformOrigin = '0 0';
+  SEL0.marks = [...D1.querySelectorAll('.leaflet-marker-icon')].map(el => { const m = /translate3d\(([-\d.]+)px, ([-\d.]+)px/.exec(el.style.transform); return { el, x: +m[1], y: +m[2] }; });
+  SEL0.paths = [...D1.querySelectorAll('.leaflet-overlay-pane path')].map(el => { const d = el.getAttribute('d'); const m = /M([\d.-]+),([\d.-]+)a([\d.]+)/.exec(d); return m ? { el, x: +m[1] + +m[3], y: +m[2], r: +m[3] } : null; }).filter(Boolean);
+  SEL0.detail = D1.querySelector('#detail');
+  // aperçus de trajet : éléments à animer
+  for (const [id, idx] of [['fPV2', 2], ['fPV3', 6]]) {
+    const D = M[id].contentDocument, o = {};
+    o.opt = D.querySelectorAll('#optList .opt')[idx]; o.opt.classList.add('vhover');
+    const lines = [...D.querySelectorAll('.leaflet-overlay-pane path.pv-el')].filter(p => /^M[\d.-]+ [\d.-]+L/.test(p.getAttribute('d')));
+    o.lines = lines.map(el => { const m = /M([\d.-]+) ([\d.-]+)L([\d.-]+) ([\d.-]+)/.exec(el.getAttribute('d')); return { el, a: [+m[1], +m[2]], b: [+m[3], +m[4]] }; });
+    o.blue = D.querySelector('path.pv-line'); o.halo = D.querySelector('path.pv-halo');
+    o.pin = D.querySelector('.pv-pin'); o.ring = D.querySelector('.pv-ring');
+    o.label = D.querySelector('.leaflet-tooltip.pv-label');
+    o.tipS = [...D.querySelectorAll('.leaflet-tooltip.pv-tip')].find(e => !e.classList.contains('pv-tip-stage'));
+    o.tipL = D.querySelector('.leaflet-tooltip.pv-tip-stage');
+    PV[id] = o;
+  }
+  // position (dans l'app) des lignes survolées, une fois la colonne défilée
+  for (const id of ['fSEL0', 'fSEL1', 'fPV2', 'fPV3']) M[id].contentDocument.querySelector('#detailBody').scrollTop = 392;
+  const ro = (id, idx) => { const e = M[id].contentDocument.querySelectorAll('#optList .opt')[idx].querySelector('.opt-main').getBoundingClientRect(); return [e.x + e.width * .45, e.y + e.height * .55]; };
+  RB.h1 = ro('fPV2', 2); RB.h2 = ro('fPV3', 6);
+  RB.w2 = $('#c2').offsetWidth; RB.w3 = $('#c3').offsetWidth;   // mesurées avant le premier rendu (encore visibles)
+}
+const scrollAt = t => Math.round(392 * E.inOutCubic(pr(t, 7.95, 8.75)));
+function camMap(t) {
+  return kf(t, [
+    [3.00, { cx: 960, cy: 540, z: 1.0 }],
+    [T.DROP, { cx: 960, cy: 540, z: 0.99 }, 'lin'],
+    [3.64, { cx: 960, cy: 540, z: 0.86 }, 'outCubic'],
+    [5.90, { cx: 985, cy: 555, z: 0.90 }, 'inOutSine'],
+    [6.95, { cx: 900, cy: 565, z: 0.95 }, 'inOutCubic'],
+    [8.05, { cx: 890, cy: 570, z: 0.96 }, 'lin'],
+    [9.10, { cx: 792, cy: 640, z: 1.22 }, 'inOutCubic'],
+    [13.95, { cx: 792, cy: 628, z: 1.24 }, 'inOutSine'],
+  ]);
+}
+const toScreen = (c, ax, ay) => [960 + (ax - c.cx) * c.z, 540 + (ay - c.cy) * c.z];
+function layer(id, on, op = 1) { const f = M[id]; const v = on ? String(op) : '0'; if (f.style.opacity !== v) f.style.opacity = v; const vis = on ? 'visible' : 'hidden'; if (f.style.visibility !== vis) f.style.visibility = vis; }
+
+function sMap(t) {
+  const on = t >= 3.0 && t < T.OUT;
+  show($('#sMap'), on); if (!on) return;
+  const c = camMap(t);
+  $('#win').style.transform = `translate(${960 - c.cx * c.z}px, ${540 - c.cy * c.z}px) scale(${c.z})`;
+
+  // quel état de l'app est à l'écran
+  const xf = pr(t, 8.36, 8.46);
+  layer('fOV', t < T.CLICK);
+  layer('fSEL0', t >= T.CLICK && t < 8.46);
+  layer('fSEL1', t >= 8.36 && t < T.H1, xf);
+  layer('fPV2', t >= T.H1 && t < T.H2);
+  layer('fPV3', t >= T.H2);
+
+  // vue d'ensemble : chute des épingles, apparition des points
+  if (t < T.CLICK) {
+    for (const p of OV.pins) { const k = pr(t, p.t, p.t + .34), b = E.outBack(k, 2.0); setT(p.el, `translateY(${-90 * (1 - b)}px)`, cl(k * 5)); }
+    for (const d of OV.dots) { const k = pr(t, d.t, d.t + .26), b = E.outBack(k, 3); setT(d.el, `scale(${b})`, cl(k * 6)); }
+    const hov = t >= 6.82, press = t >= T.CLICK - .05;
+    OV.row.classList.toggle('vhover', hov); OV.row.classList.toggle('vpress', press);
+  }
+  // clic : la fiche de l'étudiant glisse, puis la carte zoome sur son secteur
+  if (t >= T.CLICK && t < 8.46) {
+    const kd = E.outExpo(pr(t, T.CLICK, T.CLICK + .42));
+    SEL0.detail.style.transform = `translateX(${-100 * (1 - kd)}%)`;
+    const e = E.inOutCubic(pr(t, T.ZOOM0, T.ZOOM1)), s = Math.pow(2, e);
+    const q = [lerp(SEL0.p0[0], MAP_W / 2, e), lerp(SEL0.p0[1], MAP_H / 2, e)];
+    const P = (x, y) => [(x - SEL0.p0[0]) * s + q[0], (y - SEL0.p0[1]) * s + q[1]];
+    SEL0.tiles.style.transform = `translate(${q[0] - SEL0.p0[0] * s}px, ${q[1] - SEL0.p0[1] * s}px) scale(${s})`;
+    for (const m of SEL0.marks) { const [x, y] = P(m.x, m.y); m.el.style.transform = `translate3d(${x.toFixed(2)}px, ${y.toFixed(2)}px, 0px)`; }
+    for (const p of SEL0.paths) { const [x, y] = P(p.x, p.y), r = p.r; p.el.setAttribute('d', `M${(x - r).toFixed(2)},${y.toFixed(2)}a${r},${r} 0 1,0 ${2 * r},0 a${r},${r} 0 1,0 ${-2 * r},0 `); }
+  }
+  const sc = scrollAt(t);
+  for (const id of ['fSEL0', 'fSEL1', 'fPV2', 'fPV3']) { const b = M[id].contentDocument.querySelector('#detailBody'); if (b.scrollTop !== sc) b.scrollTop = sc; }
+
+  // aperçu de trajet : tracé, étiquettes, pulsations (comme dans l'app)
+  for (const [id, tH] of [['fPV2', T.H1], ['fPV3', T.H2]]) {
+    if (t < tH) continue;
+    const o = PV[id], dt = t - tH;
+    const k = E.outCubic(pr(t, tH + .05, tH + .5));
+    for (const l of o.lines) { const x = lerp(l.a[0], l.b[0], k), y = lerp(l.a[1], l.b[1], k); l.el.setAttribute('d', `M${l.a[0]} ${l.a[1]}L${x.toFixed(2)} ${y.toFixed(2)}`); }
+    o.blue.style.strokeDashoffset = (-dt * 21 / .9).toFixed(2);
+    const ph = (dt % 1.6) / 1.6; setT(o.halo, `scale(${lerp(.6, 1.6, ph)})`, lerp(.9, 0, ph));
+    o.ring.style.transform = `scale(${lerp(.4, 1.8, (dt % 1.6) / 1.6)})`; o.ring.style.opacity = lerp(1, 0, (dt % 1.6) / 1.6);
+    const kp = E.outBack(pr(t, tH + .38, tH + .62), 2); o.pin.style.transform = `translateY(${-24 * (1 - kp)}px)`; o.pin.style.opacity = cl(pr(t, tH + .38, tH + .46));
+    const fade = (el, t0) => { const kk = E.outCubic(pr(t, t0, t0 + .22)); el.style.opacity = kk; el.style.translate = `0 ${10 * (1 - kk)}px`; };
+    fade(o.tipS, tH + .02); fade(o.tipL, tH + .45);
+    const kl = pr(t, tH + .3, tH + .55); o.label.style.opacity = cl(kl * 4); o.label.style.scale = String(lerp(.5, 1, E.outBack(kl, 2.2)));
+  }
+
+  // curseur
+  const cur = $('#cursor'), ring = $('#ring');
+  const curOn = t >= 5.95 && t < 13.9;
+  show(cur, curOn);
+  if (curOn) {
+    const sRow = toScreen(c, ...RB.row), s1 = toScreen(c, ...RB.h1), s2 = toScreen(c, ...RB.h2);
+    let x, y;
+    if (t < 6.86) { const k = E.inOutCubic(pr(t, 5.95, 6.86)); x = lerp(1600, sRow[0], k); y = lerp(1010, sRow[1], k); }
+    else if (t < 8.85) { const k = E.inOutCubic(pr(t, 7.3, 8.0)); x = lerp(sRow[0], sRow[0] + 160, k); y = lerp(sRow[1], sRow[1] - 120, k); }
+    else if (t < T.H1) { const k = E.inOutCubic(pr(t, 8.85, T.H1 - .06)); const a = [sRow[0] + 160, sRow[1] - 120]; x = lerp(a[0], s1[0], k); y = lerp(a[1], s1[1], k); }
+    else if (t < 11.45) { x = s1[0]; y = s1[1]; }
+    else { const k = E.inOutCubic(pr(t, 11.45, T.H2 - .06)); x = lerp(s1[0], s2[0], k); y = lerp(s1[1], s2[1], k); }
+    const press = t >= T.CLICK - .05 && t < T.CLICK + .12 ? .82 : 1;
+    setT(cur, `translate(${x - 6}px, ${y - 6}px) scale(${press})`, 1 - pr(t, 13.6, 13.9));
+    const rt = t - T.CLICK, rp = rt >= 0 && rt < .4 ? rt / .4 : -1;
+    show(ring, rp >= 0);
+    if (rp >= 0) setT(ring, `translate(${x}px, ${y}px) scale(${lerp(.2, 1.3, E.outCubic(rp))})`, 1 - rp);
+  } else show(ring, false);
+
+  // légendes (jamais deux à la fois)
+  capAnim($('#c1'), t, T.C1in, T.C1out, 60, 806);
+  capAnim($('#c2'), t, T.C2in, T.C2out, 1860 - RB.w2, 930, true);
+  capAnim($('#c3'), t, T.C3in, T.C3out, 1860 - RB.w3, 930, true);
+}
+
+/* ---------- Final ---------- */
+function s6(t) {
+  const w = $('#wipe6'), sc = $('#s6');
+  const wk = E.outCubic(pr(t, T.WIPE6, T.OUT));
+  show(w, t >= T.WIPE6 && t < T.OUT); w.style.transform = `translateY(${1090 * (1 - wk)}px)`;
+  show(sc, t >= T.OUT); if (t < T.OUT) return;
+  const kl = pr(t, T.OUT - .02, T.OUT + .38), bl = E.outBack(kl, 2.0);
+  const hit = t >= K(32) ? 1 + .08 * Math.sin(Math.min(1, (t - K(32)) / .28) * Math.PI) : 1;
+  setT($('#logo'), `rotate(${lerp(-25, 0, bl)}deg) scale(${lerp(.1, 1, bl) * hit})`, cl(kl * 5));
+  const rise = (el, t0) => { const k = E.outExpo(pr(t, t0, t0 + .34)); setT(el, `translateY(${60 * (1 - k)}px)`, cl(pr(t, t0, t0 + .1))); };
+  rise($('#title'), K(26.5)); rise($('#tag'), K(27)); rise($('#credit'), K(28.5));
+  const ku = pr(t, K(28), K(28) + .3), bu = E.outBack(ku, 1.8);
+  setT($('#url'), `translateX(-50%) scale(${lerp(.6, 1, bu)})`, cl(ku * 4));
+}
+
+function render(t) { s1(t); sMap(t); s6(t); }
+window.render = render; window.T = T;
+window.ready = (async () => {
+  const man = await (await fetch('/data/manifest2.json')).json();
+  const ids = ['fOV', 'fSEL0', 'fSEL1', 'fPV2', 'fPV3'];
+  await Promise.all(ids.map(id => new Promise(r => { const f = $('#' + id); const ok = () => f.contentDocument && f.contentDocument.readyState === 'complete' && f.contentDocument.querySelector('#map'); if (ok()) r(); else f.addEventListener('load', () => r(), { once: true }); })));
+  await Promise.all([document.fonts.ready, ...ids.map(id => $('#' + id).contentDocument.fonts.ready)]);
+  await document.fonts.load('700 50px "Space Grotesk"');
+  setupMap(man);
+  await Promise.all(ids.flatMap(id => [...$('#' + id).contentDocument.images].map(i => i.complete ? 0 : new Promise(r => { i.onload = i.onerror = r; }))));
+  render(0);
+  return true;
+})();
+</script>
+</body>
+</html>

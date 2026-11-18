@@ -1,1 +1,3 @@
-Deux fichiers Excel, une carte, un bouton : Place2b2026 place toute une promo d'étudiants infirmiers en stage, avec des trajets raisonnables pour tous et les typologies du programme 2026 (SPA, SPS, SPR, VDE). Un seul fichier HTML, rien à installer, logiciel libre → github.com/lcssrd/Place2b2026
+Toute la promo sur une carte : Place2b2026 affiche les lieux de stage et l'adresse de chaque étudiant infirmier, et un clic suffit pour voir les stages les plus proches, en minutes et en km de route. Un seul fichier HTML, rien à installer, logiciel libre → github.com/lcssrd/Place2b2026
+
+Musique : Sascha Ende, ende.app (CC BY 4.0)
